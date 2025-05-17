@@ -33,6 +33,10 @@ export default function BookList({ books }: Props) {
   }
   
 
+  function handleOrder(id: number): void {
+    throw new Error('Function not implemented.');
+  }
+
   return (
     <div className="overflow-x-auto">
       <table className="min-w-full bg-white shadow-md rounded-lg">
@@ -62,6 +66,12 @@ export default function BookList({ books }: Props) {
                 <button className="text-red-600 hover:text-red-800" onClick={() => handleDelete(book.id)}>
                   ลบ
                 </button>
+                <button 
+    onClick={() => handleOrder(book.id)}
+    className="bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700"
+  >
+    สั่งซื้อ
+  </button>
               </td>
             </tr>
           ))}
